@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--tab菜单-->
+    <RadioGroup
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rgTab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:textSize="12sp"
+            android:gravity="center"
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_home"
+            android:paddingTop="2dp"
+            android:text="@string/home"
+            android:textColor="@drawable/selector_textcolor" />
+
+        <RadioButton
+            android:textSize="12sp"
+            android:gravity="center"
+            android:id="@+id/btnSquare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_square"
+            android:paddingTop="2dp"
+            android:text="@string/square"
+            android:textColor="@drawable/selector_textcolor" />
+
+        <RadioButton
+            android:textSize="12sp"
+            android:gravity="center"
+            android:id="@+id/btnClassify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_classify"
+            android:paddingTop="2dp"
+            android:text="@string/classify"
+            android:textColor="@drawable/selector_textcolor" />
+
+        <RadioButton
+            android:textSize="12sp"
+            android:gravity="center"
+            android:id="@+id/btnCommunity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_community"
+            android:paddingTop="2dp"
+            android:text="@string/community"
+            android:textColor="@drawable/selector_textcolor" />
+
+        <RadioButton
+            android:textSize="12sp"
+            android:gravity="center"
+            android:id="@+id/btnMine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_mine"
+            android:paddingTop="2dp"
+            android:text="@string/mine"
+            android:textColor="@drawable/selector_textcolor" />
+    </RadioGroup>
+</LinearLayout>
