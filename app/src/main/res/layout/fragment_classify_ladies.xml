@@ -3,42 +3,21 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <RadioGroup
-        android:id="@+id/rg_classify_ladies"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RadioButton
-            android:paddingTop="@dimen/rb_classify_padtop"
-            android:paddingBottom="@dimen/rb_classify_padtop"
-            android:paddingLeft="@dimen/rb_classify_padleft"
-            android:paddingRight="@dimen/rb_classify_padleft"
-            android:button="@null"
-            android:text="女士"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:paddingTop="@dimen/rb_classify_padtop"
-            android:paddingBottom="@dimen/rb_classify_padtop"
-            android:paddingLeft="@dimen/rb_classify_padleft"
-            android:paddingRight="@dimen/rb_classify_padleft"
-            android:button="@null"
-            android:text="上装"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:paddingTop="@dimen/rb_classify_padtop"
-            android:paddingBottom="@dimen/rb_classify_padtop"
-            android:paddingLeft="@dimen/rb_classify_padleft"
-            android:paddingRight="@dimen/rb_classify_padleft"
-            android:button="@null"
-            android:text="裤装"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </RadioGroup>
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/lv_classify_ladies"
+            android:background="#F8F8F8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </ListView>
+    </LinearLayout>
+
     <FrameLayout
-        android:id="@+id/frame_classify_ladies"
-        android:background="#0f0"
+        android:id="@+id/frame_classify"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></FrameLayout>
+
 </LinearLayout>

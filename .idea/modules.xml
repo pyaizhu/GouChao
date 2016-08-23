@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/GouChao.iml" filepath="$PROJECT_DIR$/GouChao.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/gouchaolibrary/gouchaolibrary.iml" filepath="$PROJECT_DIR$/gouchaolibrary/gouchaolibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/refreshloadmorelayout/refreshloadmorelayout.iml" filepath="$PROJECT_DIR$/refreshloadmorelayout/refreshloadmorelayout.iml" />
     </modules>
   </component>
 </project>

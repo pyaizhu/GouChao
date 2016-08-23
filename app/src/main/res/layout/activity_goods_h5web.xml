@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--商品购买页（H5WEB）的布局文件-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--头部的工具栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--返回键-->
+        <ImageView
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/iv_goods_h5web"
+            android:src="@drawable/common_back_btn_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <!--商品类型名称-->
+        <TextView
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_goods_h5web"
+            android:text="商品详情"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!--商品列表-->
+    <WebView
+        android:id="@+id/webview_goods_h5web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+</LinearLayout>

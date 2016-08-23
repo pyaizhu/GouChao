@@ -1,1 +1,1 @@
-include ':app', ':gouchaolibrary'
+include ':app', ':gouchaolibrary', ':refreshloadmorelayout'

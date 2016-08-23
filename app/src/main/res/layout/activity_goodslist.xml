@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--商品列表页的布局文件-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--头部的工具栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--返回键-->
+        <ImageView
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/iv_goodslist_back"
+            android:src="@drawable/common_back_btn_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <!--商品类型名称-->
+        <TextView
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_goods_typename"
+            android:text="商品类型"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <!--商品列表-->
+    <com.qbw.customview.RefreshLoadMoreLayout
+        android:id="@+id/refreshloadmore_goodslist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridView
+            android:gravity="center"
+            android:columnWidth="160dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="3dp"
+            android:numColumns="2"
+            android:id="@+id/gridview_goodslistactivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.qbw.customview.RefreshLoadMoreLayout>
+</LinearLayout>

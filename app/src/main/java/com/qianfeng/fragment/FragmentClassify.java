@@ -4,8 +4,10 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.qianfeng.base.BaseFragment;
 import com.qianfeng.gouchao.R;
@@ -18,26 +20,28 @@ import java.util.List;
  */
 public class FragmentClassify extends BaseFragment{
 
-    TabLayout tab_classify_title;
-    ViewPager viewpager_classify;
-    List<Fragment> classify_fragment_list;
-    List<String> tab_titles;
+    TabLayout tab_classify_title;//头部导航栏
+    ViewPager viewpager_classify;//底部viewpager
+    List<String> tab_titles;//tablayout各tab名称的list集合
 
 
     @Override
     protected int getContentViewId() {
         return R.layout.fargment_classify;
     }
+
     /**初始化控件*/
     @Override
     protected void init(View view) {
         viewpager_classify= (ViewPager) view.findViewById(R.id.viewpager_classify);
         tab_classify_title= (TabLayout) view.findViewById(R.id.tab_classify_title);
-
     }
+
     /**加载数据*/
     @Override
     protected void loadDatas() {
+
+        /**TabLayout各tab的名称*/
         tab_titles=new ArrayList<>();
         tab_titles.add("女装");
         tab_titles.add("男装");
@@ -50,42 +54,45 @@ public class FragmentClassify extends BaseFragment{
         tab_classify_title.addTab(tab_classify_title.newTab().setText(tab_titles.get(2)));
         tab_classify_title.addTab(tab_classify_title.newTab().setText(tab_titles.get(3)));
         tab_classify_title.setTabMode(TabLayout.MODE_FIXED);
-        /**viewpager设置adapter*/
-        classify_fragment_list=new ArrayList<>();
-        classify_fragment_list.add(new FragmentClassifyLadies());
-        classify_fragment_list.add(new FragmentClassifyMan());
-        classify_fragment_list.add(new FragmentClassifyGirl());
-        classify_fragment_list.add(new FragmentClassifyBoy());
 
-        viewpager_classify.setAdapter(new ClassifyFragmentPagerAdapter(getActivity().getSupportFragmentManager(),classify_fragment_list,tab_titles));
+        /**viewpager设置adapter*/
+        viewpager_classify.setAdapter(new ClassifyFragmentPagerAdapter(getActivity().getSupportFragmentManager(),tab_titles));
+
+        /**设置TabLayout与viewpager关联*/
         tab_classify_title.setupWithViewPager(viewpager_classify);
     }
 
-    private static class ClassifyFragmentPagerAdapter extends FragmentPagerAdapter {
-        List<Fragment> fragments;
+    /**viewpager的adapter类*/
+    class ClassifyFragmentPagerAdapter extends FragmentPagerAdapter {
         List<String> titles;
-        public ClassifyFragmentPagerAdapter(FragmentManager fm, List<Fragment> fragments,List<String> titles) {
+        public ClassifyFragmentPagerAdapter(FragmentManager fm,List<String> titles) {
             super(fm);
-            this.fragments=fragments;
             this.titles=titles;
         }
 
         @Override
         public Fragment getItem(int position) {
-            return fragments.get(position);
+            return FragmentClassifyLadies.getFragmentClassifyChild(position+"");
         }
 
         @Override
         public int getCount() {
-            return fragments.size();
+            return 4;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             return titles.get(position);
         }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            return super.instantiateItem(container, position);
+        }
+
+        @Override
+        public int getItemPosition(Object object) {
+            return PagerAdapter.POSITION_UNCHANGED;
+        }
     }
-
-
-
 }
