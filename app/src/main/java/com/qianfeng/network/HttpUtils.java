@@ -2,6 +2,7 @@ package com.qianfeng.network;
 
 
 
+import com.qianfeng.Bean.ChaoNanBean;
 import com.qianfeng.Bean.HomeBean;
 import com.qianfeng.Bean.HomeImageViewBean;
 
@@ -26,4 +27,7 @@ public interface HttpUtils {
 
     @GET(HttpURLs.Home_ViewPager_URL)
     Call<HomeImageViewBean> getHomeImageViewBean();
+
+    @GET(HttpURLs.Home_Chaonan_URL)
+    Call<ChaoNanBean> getChaoNanBean(@Query("page") String page);
 }

@@ -43,45 +43,43 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
                         android:src="@drawable/icon_sy_cn"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="8dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
                         android:src="@drawable/icon_sy_cnv"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="8dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
                         android:src="@drawable/icon_sy_ct"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="8dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
                         android:src="@drawable/icon_sy_mrzj"/>
                 </LinearLayout>
             </LinearLayout>
             <!--用于悬停的部分-->
             <com.qianfeng.widget.PagerSlidingTabStrip
                 android:id="@+id/pagerStrip"
-                app:pstsUnderlineColor="#fff"
-                app:pstsUnderlineHeight="0dp"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/tab_height"
-                />
-
+                app:pstsUnderlineColor="#fff"
+                app:pstsUnderlineHeight="0dp"/>
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"

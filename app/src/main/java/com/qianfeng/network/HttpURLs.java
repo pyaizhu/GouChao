@@ -16,4 +16,8 @@ public interface HttpURLs {
 
     //首页模块下的轮播图
     String Home_ViewPager_URL ="home/getHotColumnList?sign=7528d7144dc77e4ae6460326b4554a1f&maxresult=20&ver=1.0&page=&deviceID=182943336455323";
+
+    //首页中的潮男
+    String Home_Chaonan_URL = "home/getTypeCollList?sign=7528d7144dc77e4ae6460326b4554a1f&uid=0&maxresult=20&ver=1.0&page=&deviceID=182943336455323&ntype=1";
 }
+
