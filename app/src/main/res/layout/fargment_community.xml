@@ -3,9 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<TextView
-    android:textSize="30dp"
-    android:text="@string/community"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radio_community"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/Redman"
+                android:button="@null"
+                android:onClick="onClick"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:textColor="@drawable/selector_textcolor"
+                android:background="#00000000"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="红人馆" />
+            <RadioButton
+                android:id="@+id/Starmatch"
+                android:button="@null"
+                android:onClick="onClick"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@drawable/selector_textcolor"
+                android:background="#00000000"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="星搭配" />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/icon_search_lqx"/>
+    </LinearLayout>
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#b2b2b3"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/community_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </LinearLayout>

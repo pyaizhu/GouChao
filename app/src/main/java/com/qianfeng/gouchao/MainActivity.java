@@ -55,18 +55,23 @@ public class MainActivity extends BaseActivity {
     @OnClick({R.id.btnHome, R.id.btnSquare, R.id.btnClassify, R.id.btnCommunity, R.id.btnMine})
     public void onClick(View view) {
         switch (view.getId()) {
+            //首页页面
             case R.id.btnHome:
                 fragmentManager(R.id.frameLayout,new FragmentHome(),"home");
                 break;
+            //广场页面
             case R.id.btnSquare:
                 fragmentManager(R.id.frameLayout,new FragmentSquare(),"square");
                 break;
+            //分类页面
             case R.id.btnClassify:
                 fragmentManager(R.id.frameLayout,new FragmentClassify(),"classify");
                 break;
+            //社区页面
             case R.id.btnCommunity:
                 fragmentManager(R.id.frameLayout,new FragmentCommunity(),"communuty");
                 break;
+            //我的页面
             case R.id.btnMine:
                 fragmentManager(R.id.frameLayout,new FragmentMine(),"mine");
                 break;
