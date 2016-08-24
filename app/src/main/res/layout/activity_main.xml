@@ -15,7 +15,6 @@
 
     <!--用于占位的FrameLayout-->
     <FrameLayout
-        android:background="#454591"
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,7 +1,5 @@
 package com.qianfeng.gouchao;
 
-import android.os.Bundle;
-import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -13,28 +11,33 @@ import com.qianfeng.fragment.FragmentHome;
 import com.qianfeng.fragment.FragmentMine;
 import com.qianfeng.fragment.FragmentSquare;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-import butterknife.OnClick;
-
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 
 
-    @InjectView(R.id.btnHome)
-    RadioButton btnHome;
-    @InjectView(R.id.btnSquare)
-    RadioButton btnSquare;
-    @InjectView(R.id.btnClassify)
-    RadioButton btnClassify;
-    @InjectView(R.id.btnCommunity)
-    RadioButton btnCommunity;
-    @InjectView(R.id.btnMine)
-    RadioButton btnMine;
-    @InjectView(R.id.rgTab)
-    RadioGroup rgTab;
-    @InjectView(R.id.frameLayout)
-    FrameLayout frameLayout;
+    // @InjectView(R.id.btnHome)
+    private RadioButton btnHome;
+    //  @InjectView(R.id.btnSquare)
+    private RadioButton btnSquare;
+    //   // @InjectView(R.id.btnCommunity)
+    private RadioButton btnCommunity;
+    //  @InjectView(R.id.btnMine)
+    private RadioButton btnMine;
+    private RadioButton btnClassify;
+    // @InjectView(R.id.rgTab)
 
+    private RadioGroup rgTab;
+    //  @InjectView(R.id.frameLayout)
+    private FrameLayout frameLayout;
+
+
+    //    @Override
+    //    protected void onCreate(Bundle savedInstanceState) {
+    //        super.onCreate(savedInstanceState);
+    //        // TODO: add setContentView(...) invocation
+    //        ButterKnife.inject(this);
+    //        rgTab.setOnCheckedChangeListener(this);
+    //        rgTab.getChildAt(0).performClick();//模拟点击首页按钮
+    //    }
     @Override
     public int getContentViewId() {
         return R.layout.activity_main;
@@ -42,33 +45,34 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void init() {
-
+        super.init();
+        btnHome = findViewByIds(R.id.btnHome);
+        btnClassify = findViewByIds(R.id.btnClassify);
+        btnCommunity = findViewByIds(R.id.btnCommunity);
+        btnMine = findViewByIds(R.id.btnMine);
+        btnSquare = findViewByIds(R.id.btnSquare);
+        rgTab = findViewByIds(R.id.rgTab);
+        rgTab.setOnCheckedChangeListener(this);
+        rgTab.getChildAt(0).performClick();//模拟点击首页按钮
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.inject(this);
-    }
-
-    @OnClick({R.id.btnHome, R.id.btnSquare, R.id.btnClassify, R.id.btnCommunity, R.id.btnMine})
-    public void onClick(View view) {
-        switch (view.getId()) {
+    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+        switch (i) {
             case R.id.btnHome:
-                fragmentManager(R.id.frameLayout,new FragmentHome(),"home");
+                fragmentManager(R.id.frameLayout, new FragmentHome(), "home");
                 break;
             case R.id.btnSquare:
-                fragmentManager(R.id.frameLayout,new FragmentSquare(),"square");
+                fragmentManager(R.id.frameLayout, new FragmentSquare(), "square");
                 break;
             case R.id.btnClassify:
-                fragmentManager(R.id.frameLayout,new FragmentClassify(),"classify");
+                fragmentManager(R.id.frameLayout, new FragmentClassify(), "classify");
                 break;
             case R.id.btnCommunity:
-                fragmentManager(R.id.frameLayout,new FragmentCommunity(),"communuty");
+                fragmentManager(R.id.frameLayout, new FragmentCommunity(), "community");
                 break;
             case R.id.btnMine:
-                fragmentManager(R.id.frameLayout,new FragmentMine(),"mine");
+                fragmentManager(R.id.frameLayout, new FragmentMine(), "mine");
                 break;
         }
     }
