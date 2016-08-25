@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 
 import com.qianfeng.Bean.HomeBean;
+import com.qianfeng.Bean.HomeImageViewBean;
 import com.qianfeng.adapter.ZuiXinRecyclerAdapter;
 import com.qianfeng.application.MyApplication;
 import com.qianfeng.gouchao.R;
@@ -32,7 +33,6 @@ public class RecyclerViewFragment extends ScrollAbleFragment implements Scrollab
     private int page = 1;
     private ZuiXinRecyclerAdapter adapter;
     List<HomeBean.AddDatasBean.ResultlistBean> strlist = new ArrayList<>();
-
     public static RecyclerViewFragment newInstance() {
         RecyclerViewFragment recyclerViewFragment = new RecyclerViewFragment();
         return recyclerViewFragment;

@@ -5,6 +5,7 @@ package com.qianfeng.adapter;
  */
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,7 +32,6 @@ public class ZuiXinRecyclerAdapter extends RecyclerView.Adapter<ZuiXinRecyclerAd
 
     private Context mContext;
     private List<HomeBean.AddDatasBean.ResultlistBean> strList;
-    private OnRecycleViewClickListener onRecycleViewClickListener = null;
 
     public ZuiXinRecyclerAdapter(Context mContext, List<HomeBean.AddDatasBean.ResultlistBean> strList) {
         this.mContext = mContext;
@@ -94,8 +94,5 @@ public class ZuiXinRecyclerAdapter extends RecyclerView.Adapter<ZuiXinRecyclerAd
         //            tv.setText(txt);
         //            itemView.setBackgroundColor(bgcolor);
         //        }
-    }
-    public static interface OnRecycleViewClickListener{
-        void OnitemLick(View view,String data);
     }
 }

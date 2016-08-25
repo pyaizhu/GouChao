@@ -27,9 +27,9 @@ public abstract class BasePagerFragment extends Fragment {
 
     public void initFragmentPager(ViewPager viewPager, PagerSlidingTabStrip pagerSlidingTabStrip, final ScrollableLayout mScrollLayout) {
         final ArrayList<ScrollAbleFragment> fragmentList = new ArrayList<>();
-        fragmentList.add(FragmentHomeChaonan.newInstance());
         fragmentList.add(RecyclerViewFragment.newInstance());
-        fragmentList.add(FragmentHomeChaonan.newInstance());
+        fragmentList.add(RecyclerViewFragment.newInstance());
+        fragmentList.add(RecyclerViewFragment.newInstance());
         fragmentList.add(RecyclerViewFragment.newInstance());
 
         List<String> titleList = new ArrayList<>();

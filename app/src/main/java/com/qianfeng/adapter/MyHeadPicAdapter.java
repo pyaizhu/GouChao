@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 
 import com.qianfeng.Bean.ColorsConstant;
+import com.qianfeng.gouchao.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +20,11 @@ public class MyHeadPicAdapter extends PagerAdapter {
 
 
     public MyHeadPicAdapter(Context context) {
-        for (int i = 0; i < ColorsConstant.colors.length; i++) {
+        for (int i = 0; i < 8; i++) {
             ImageView imageView = new ImageView(context);
-            imageView.setLayoutParams(new ViewGroup.LayoutParams(50, 50));
-            imageView.setBackgroundColor(context.getResources().getColor(ColorsConstant.colors[i]));
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            imageView.setImageResource(R.drawable.zhanwei);
+            //imageView.setBackgroundColor(context.getResources().getColor(ColorsConstant.colors[i]));
             final int index = i;
             imageView.setOnClickListener(new View.OnClickListener() {
                 //头部图片的点击事件
